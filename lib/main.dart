@@ -4,6 +4,7 @@ import 'package:provider_basic_example/provider/favorite_provider.dart';
 import 'package:provider_basic_example/provider/provider_container.dart';
 import 'package:provider_basic_example/provider/provider_count.dart';
 import 'package:provider_basic_example/provider/theme_provider.dart';
+import 'package:provider_basic_example/screen/switch_screen.dart';
 
 import 'package:provider_basic_example/screen/theme_screen.dart';
 
@@ -80,7 +81,7 @@ class MyApp extends StatelessWidget {
                     textTheme: ButtonTextTheme.primary,
                   ),
                 ),
-                home: const ThemeScreen());
+                home: const SwitchScreen());
           },
         ));
   }

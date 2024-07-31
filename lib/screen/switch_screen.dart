@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider_basic_example/screen/container_screen.dart';
 import 'package:provider_basic_example/screen/count_screen.dart';
 import 'package:provider_basic_example/screen/favourite_screen.dart';
+import 'package:provider_basic_example/screen/theme_screen.dart';
 
 class SwitchScreen extends StatelessWidget {
   const SwitchScreen({super.key});
@@ -70,6 +71,25 @@ class SwitchScreen extends StatelessWidget {
                   },
                   child: const Text(
                     'FAVOURITE PROVIDER EXAMPLE',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20),
+                  ))),
+          const SizedBox(
+            height: 50,
+          ),
+          Center(
+              child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return const ThemeScreen();
+                      },
+                    ));
+                  },
+                  child: const Text(
+                    'THEME CHANGE  EXAMPLE WITH PROVIDER',
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
