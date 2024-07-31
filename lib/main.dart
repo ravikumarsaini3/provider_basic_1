@@ -7,6 +7,7 @@ import 'package:provider_basic_example/provider/theme_provider.dart';
 import 'package:provider_basic_example/screen/switch_screen.dart';
 
 import 'package:provider_basic_example/screen/theme_screen.dart';
+import 'package:provider_basic_example/screen/value_notifier_statelesswidget.dart';
 
 void main() {
   runApp(const MyApp());

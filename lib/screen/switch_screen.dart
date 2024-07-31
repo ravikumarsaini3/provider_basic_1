@@ -3,6 +3,7 @@ import 'package:provider_basic_example/screen/container_screen.dart';
 import 'package:provider_basic_example/screen/count_screen.dart';
 import 'package:provider_basic_example/screen/favourite_screen.dart';
 import 'package:provider_basic_example/screen/theme_screen.dart';
+import 'package:provider_basic_example/screen/value_notifier_statelesswidget.dart';
 
 class SwitchScreen extends StatelessWidget {
   const SwitchScreen({super.key});
@@ -35,10 +36,10 @@ class SwitchScreen extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20),
+                    fontSize: 14),
               )),
           const SizedBox(
-            height: 50,
+            height: 30,
           ),
           Center(
             child: TextButton(
@@ -54,11 +55,11 @@ class SwitchScreen extends StatelessWidget {
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 20),
+                      fontSize: 14),
                 )),
           ),
           const SizedBox(
-            height: 50,
+            height: 30,
           ),
           Center(
               child: TextButton(
@@ -74,26 +75,47 @@ class SwitchScreen extends StatelessWidget {
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20),
+                        fontSize: 14),
                   ))),
           const SizedBox(
-            height: 50,
+            height: 30,
+          ),
+          Center(
+            child: TextButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return const ThemeScreen();
+                  },
+                ));
+              },
+              child: const Text(
+                'THEME CHANGE  EXAMPLE WITH PROVIDER',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 30,
           ),
           Center(
               child: TextButton(
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(
                       builder: (context) {
-                        return const ThemeScreen();
+                        return const ValueNotifierStatelesswidget();
                       },
                     ));
                   },
                   child: const Text(
-                    'THEME CHANGE  EXAMPLE WITH PROVIDER',
+                    'Value Notifier Stateless Widget ',
                     style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
-                        fontSize: 20),
+                        fontSize: 14),
                   )))
         ],
       ),
